@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        nav {
+            background: #303a52;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            box-shadow: 0px 2px 5px #888;
+        }
+
+        nav button {
+            background: #ff5a5f;
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        nav button:hover {
+            background: #d9534f;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            box-shadow: 0px 0px 10px #ddd;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .result {
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0px 3px 10px #aaa;
+            background-color: #fff;
+            transition: transform 0.3s;
+        }
+
+        .result:hover {
+            transform: translateY(-5px);
+        }
+
+        .result p {
+            color: #303a52;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .result a {
+            color: #ff5a5f;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .result a:hover {
+            color: #d9534f;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <button onclick="location.href='http://localhost:2311'">
+        Main Menu
+    </button>
+</nav>
+
+<main>
+    <div class="result">
+        <p>Your shortened URL:</p>
+        <a href="{{ .url }}">{{ .url }}</a>
+    </div>
+</main>
+
+</body>
+</html>

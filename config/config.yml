@@ -1,0 +1,5 @@
+server:
+  port: 2311
+
+api:
+  url: "https://cleanuri.com/api/v1/shorten"
