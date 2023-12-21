@@ -1,4 +1,4 @@
-# URL Shortener
+# URL Shortener App
 This web application serves as a URL Shortener, built with Go and Gin. Users can easily shorten URLs through a user-friendly interface.
 ## Technologies
 
@@ -25,13 +25,13 @@ The project is organized into the following main components:
 
 ```shell
 # Clone the repository:
-git clone https://github.com/woozie-10/url-shortener.git
+git clone https://github.com/woozie-10/url-shortener-app.git
 
 # Change to the project directory:
-cd url-shortener
+cd url-shortener-app
 
 # Run the application:
-sudo docker-compose up
+make build && make run
 
 ```
 The server should start, and you can access the app at http://localhost:2311.
@@ -43,15 +43,10 @@ To run tests in a project, follow these steps:
 1. **Navigate to Project Root**: First, open your terminal and navigate to the root directory of project:
 
    ```shell
-   cd url-shortener
+   cd url-shortener-app
    ```
-2. **Enter the Tests Directory**: Move to the tests directory within project:
-
-    ```shell
-    cd tests
-    ```
-3. **Run Tests**: Run the tests using the go test command. This command will automatically discover and execute all the test functions in project:
+3. **Run Tests**: Run the tests using the command. This command will automatically discover and execute all the test functions in project:
 
    ```shell
-   go test
+   make test
    ```
