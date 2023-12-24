@@ -6,6 +6,7 @@ This web application serves as a URL Shortener, built with Go and Gin. Users can
 - [Gin](https://github.com/gin-gonic/gin)
 - [API](https://cleanuri.com/docs)
 - [Docker](https://www.docker.com/)
+- [Swagger](https://swagger.io/)
 - [Viper](https://github.com/spf13/viper)
 
 ## Project Structure
@@ -18,6 +19,7 @@ The project is organized into the following main components:
 - `entities`: Defines the data model for the `Response` entities.
 - `handlers`: Implements the HTTP request handlers.
 - `config`: Contains configuration settings and management for the web application.
+- `docs`: Сontains Swagger documentation configuration files for the web application.
 - `tests`: Responsible for writing and running test cases to ensure the correctness and reliability of application.
 - `frontend`: Contains the client side of the application
 
@@ -50,3 +52,13 @@ To run tests in a project, follow these steps:
    ```shell
    make test
    ```
+# Swagger UI
+
+How to Generate Swagger Documentation:
+
+1. **Launch the application**
+2. **You can access the Swagger UI by running your application and visiting the Swagger UI endpoint:**
+   ```shell
+   localhost:2311/swagger/index.html
+   ```
+   This provides an interactive interface for exploring and testing API endpoints.
