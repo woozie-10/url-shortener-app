@@ -1,0 +1,57 @@
+basePath: /
+host: localhost:2311
+info:
+  contact: {}
+  description: This web application serves as a URL Shortener, built with Go and Gin.
+    Users can easily shorten URLs through a user-friendly interface.
+  title: URL Shortener App
+  version: "1.0"
+paths:
+  /:
+    get:
+      description: Render the index page with HTML content
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Render the index page
+      tags:
+      - home
+    post:
+      consumes:
+      - application/x-www-form-urlencoded
+      description: Shorten a given URL using the API
+      parameters:
+      - description: form data of the URL to be shortened
+        in: formData
+        name: url
+        required: true
+        type: string
+      produces:
+      - text/html
+      responses:
+        "200":
+          description: OK
+          headers:
+            Content-Type:
+              description: text/html; charset=utf-8
+              type: string
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          headers:
+            Content-Type:
+              description: text/html; charset=utf-8
+              type: string
+          schema:
+            type: string
+      summary: Shorten a given URL
+      tags:
+      - url
+schemes:
+- http
+swagger: "2.0"
