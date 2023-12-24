@@ -12,7 +12,7 @@ import (
 )
 
 func ShortenURL(inputURL string) (string, error) {
-	var response entities.Response
+	var response entities.ApiResponse
 
 	requestURL := config.Config.GetString("api.url")
 	params := url.Values{}
